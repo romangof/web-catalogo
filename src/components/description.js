@@ -7,11 +7,8 @@ export default class Description extends Component {
   }
 
   componentWillMount() {
-    // console.log("fetching");
-    // fetch( `/api/catalogo/${this.props.id}`, { // comment this when pushing to heroku
-    fetch( `/api/catalogo/${this.props.id}`, { // comment this when pushing to heroku
-    // fetch(  `https://app-catalogo-web.herokuapp.com/api/catalogo/${this.props.id}`, { // comment this when pushing to heroku
-    // fetch(`${env.REACT_APP_API_URL}/catalogo`, { // use this when pushing to heroku
+    // fetch( 'https://cors-anywhere.herokuapp.com/' + `https://app-catalogo-web.herokuapp.com/api/catalogo/${this.props.id}`, { // comment this when pushing to heroku
+    fetch( `/api/catalogo/${this.props.id}`, { // use this when pushing to heroku
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
@@ -19,10 +16,10 @@ export default class Description extends Component {
         'API-KEY': '9f580ac488f3'
       }
     })
-    .then((response) => { console.log("11111"); console.log(response); return response.json() })
+    .then((response) => response.json() )
     .then((response) => {
-      console.log("••••••");
-      console.log(response);
+      // console.log("••••••");
+      // console.log(response);
       this.setState({data: response})
       // response && console.log(response.error)
     })

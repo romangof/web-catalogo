@@ -7,10 +7,8 @@ export default class Description extends Component {
   }
 
   componentWillMount() {
-    console.log("fetching");
     // fetch( 'https://cors-anywhere.herokuapp.com/' + `https://app-catalogo-web.herokuapp.com/api/catalogo/${this.props.id}/caracteristicas`, { // comment this when pushing to heroku
-    fetch( `/api/catalogo/${this.props.id}/caracteristicas`, { // comment this when pushing to heroku
-    // fetch(`${env.REACT_APP_API_URL}/catalogo`, { // use this when pushing to heroku
+    fetch( `/api/catalogo/${this.props.id}/caracteristicas`, { // use this when pushing to heroku
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
@@ -20,8 +18,8 @@ export default class Description extends Component {
     })
     .then((response) => { return response.json() })
     .then((response) => {
-      console.log("••••••");
-      console.log(response);
+      // console.log("••••••");
+      // console.log(response);
       this.setState({data: response})
       // response && console.log(response.error)
     })
@@ -29,9 +27,9 @@ export default class Description extends Component {
   }
 
   render() {
-    console.log("++++++");
-    console.log(this.state);
-    console.log(this.props);
+    // console.log("++++++");
+    // console.log(this.state);
+    // console.log(this.props);
     // console.log(this.state.data.title);
     // console.log(this.state.data.description);
     // console.log(this.props);
