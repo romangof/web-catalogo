@@ -2,6 +2,7 @@
   "name": "catalogo-web",
   "version": "0.1.1",
   "private": true,
+  "proxy": "https://app-catalogo-web.herokuapp.com/api/",
   "dependencies": {
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.3",
