@@ -8,8 +8,8 @@ export default class Description extends Component {
 
   componentWillMount() {
     console.log("fetching");
-    const CORSProxyURL = 'https://cors-anywhere.herokuapp.com/'
-    fetch( CORSProxyURL + `https://app-catalogo-web.herokuapp.com/api/catalogo/${this.props.id}`, { // comment this when pushing to heroku
+    fetch( `/api/catalogo/${this.props.id}`, { // comment this when pushing to heroku
+    // fetch(  `https://app-catalogo-web.herokuapp.com/api/catalogo/${this.props.id}`, { // comment this when pushing to heroku
     // fetch(`${env.REACT_APP_API_URL}/catalogo`, { // use this when pushing to heroku
       headers: {
         'Accept': 'application/json',
