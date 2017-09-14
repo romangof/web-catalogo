@@ -9,7 +9,9 @@ const logoStyle = { padding: '10px 10px 20px 10px', maxHeight: '60px' }
 export default () => 
 <Navbar>
   <Nav >
-    <NavItem eventKey={1} href="#"><h4 style={textColor}>Catálogo de Mantenimiento por proximidad</h4></NavItem>
+    <NavItem eventKey={1} href="#">
+      <h4 style={textColor}><strong>Catálogo de Mantenimiento por proximidad</strong></h4>
+    </NavItem>
   </Nav>
   <Nav pullRight>
     <Navbar.Brand>

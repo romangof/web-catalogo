@@ -4,6 +4,19 @@
   background-color: #00A69C;
 }
 
+hr {
+  border-top: 1px solid #9C9B9B;
+}
+
+.tab-style {
+  border-bottom: 2px groove #9C9B9B;
+}
+
+.tab-style>.active {
+  border-bottom: 2px groove #FAAF40;
+}
+
+
 /* #FAAF40 */
 
 

@@ -24,8 +24,9 @@ export default class Description extends Component {
   }
 
   render() {
-    return <div style={{padding: "0 5%"}}>
+    return <div className="well" style={{padding: "2% 5%", margin: "5%"}}>
       <h1>{this.state.data.title}</h1>
+      <br />
 
       {this.state.data.data_rows.map( element => 
         <Row key={element.id}>

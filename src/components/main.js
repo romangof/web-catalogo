@@ -13,11 +13,11 @@ export default ({ match }) =>
       <Description id={ match.params.id } />
     </Tab>
 
-    <Tab eventKey={2} title="Información técnica">
+    <Tab eventKey={2} title="Información técnica" tabClassName="tab-style">
       <Features id={ match.params.id } />
     </Tab>
 
-    <Tab eventKey={3} title="Biblioteca técnica">
+    <Tab eventKey={3} title="Biblioteca técnica" tabClassName="tab-style">
       <ActionLibrary id={ match.params.id } />
     </Tab>
   </Tabs>
