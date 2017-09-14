@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 
 export default class Description extends Component {
   constructor(props) {
@@ -25,17 +25,15 @@ export default class Description extends Component {
 
   render() {
     return <div style={{padding: "0 5%"}}>
-      {console.log(this.state)}
       <h1>{this.state.data.title}</h1>
 
-        { this.state.data.data_rows.map( element => 
-          <Row key={element.id}>
-            <Col xs={6}>{element.column_1}</Col>
-            <Col xs={6}>{element.column_2}</Col>
-            <hr/>
-          </Row>
-        )}
-
+      {this.state.data.data_rows.map( element => 
+        <Row key={element.id}>
+          <Col xs={6}>{element.column_1}</Col>
+          <Col xs={6}>{element.column_2}</Col>
+          <hr/>
+        </Row>
+      )}
     </div>
   }
 };

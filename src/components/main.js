@@ -4,10 +4,12 @@ import Description from './description';
 import Features from './features';
 import ActionLibrary from './action_library';
 
+// { border:'2px solid #9C9B9B'}
+
 export default ({ match }) => 
 <div>
-  <Tabs id="uncontrolled-tab-example" mountOnEnter={true}>
-    <Tab eventKey={1} title="Descripción de Equipo">
+  <Tabs id="uncontrolled-tab-example" justified mountOnEnter={false}>
+    <Tab eventKey={1} title="Descripción de Equipo" tabClassName="tab-style" >
       <Description id={ match.params.id } />
     </Tab>
 

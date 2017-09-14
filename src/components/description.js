@@ -22,7 +22,7 @@ export default class Description extends Component {
   }
 
   render() {
-    return <div>
+    return <div style={{padding: "0 5%"}}>
       <h1>{this.state.data.title}</h1>
       <div dangerouslySetInnerHTML={{__html: this.state.data.description}} />
     </div>
