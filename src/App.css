@@ -2,6 +2,7 @@
   margin-bottom: 0;
   color: white;
   background-color: #00A69C;
+  min-height: 100px;
 }
 
 hr {
@@ -9,11 +10,21 @@ hr {
 }
 
 .tab-style {
-  border-bottom: 2px groove #9C9B9B;
+  border-left: 1px solid #9C9B9B;
+  font-size: 20px;
+  font-weight: 550;
+  color: #585857;
 }
 
-.tab-style>.active {
-  border-bottom: 2px groove #FAAF40;
+.nav-tabs.nav-justified>li>a {
+  border-bottom: 4px solid #9C9B9B;
+  border-radius: 4px 4px 0 0;
+  color: #585857;  
+}
+
+.nav-tabs.nav-justified>.active>a, .nav-tabs.nav-justified>.active>a:focus, .nav-tabs.nav-justified>.active>a:hover {
+  border-bottom: 4px solid #FAAF40;
+  color: #585857;  
 }
 
 

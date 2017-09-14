@@ -3,14 +3,14 @@ import { Nav, Navbar, NavItem } from 'react-bootstrap';
 import alLogo from '../assets/AL-header.png';
 import kannusLogo from '../assets/kannus-header.png';
 
-const textColor = { color: 'white' }
-const logoStyle = { padding: '10px 10px 20px 10px', maxHeight: '60px' }
+const textColor = { color: 'white', fontSize: '30px' }
+const logoStyle = { padding: '15px 10px 20px 10px', maxHeight: '70px' }
 
 export default () => 
 <Navbar>
   <Nav >
     <NavItem eventKey={1} href="#">
-      <h4 style={textColor}><strong>Catálogo de Mantenimiento por proximidad</strong></h4>
+      <h1 style={textColor}>Catálogo de Mantenimiento por proximidad</h1>
     </NavItem>
   </Nav>
   <Nav pullRight>

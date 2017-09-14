@@ -7,8 +7,8 @@ export default class Description extends Component {
   }
 
   componentWillMount() {
-    // fetch( 'https://cors-anywhere.herokuapp.com/' + `https://app-catalogo-web.herokuapp.com/api/catalogo/${this.props.id}`, { // comment this when pushing to heroku
-    fetch( `/api/catalogo/${this.props.id}`, { // use this when pushing to heroku
+    fetch( 'https://cors-anywhere.herokuapp.com/' + `https://app-catalogo-web.herokuapp.com/api/catalogo/${this.props.id}`, { // comment this when pushing to heroku
+    // fetch( `/api/catalogo/${this.props.id}`, { // use this when pushing to heroku
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
@@ -22,7 +22,7 @@ export default class Description extends Component {
   }
 
   render() {
-    return <div className="well" style={{padding: "2% 5%", margin: "5%"}}>
+    return <div className="well" style={{padding: "2% 5%", margin: "5%", border: "none"}}>
       <h1>{this.state.data.title}</h1>
       <hr/>
       <div dangerouslySetInnerHTML={{__html: this.state.data.description}} />
