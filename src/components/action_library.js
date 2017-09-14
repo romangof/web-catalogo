@@ -19,8 +19,8 @@ export default class Description extends Component {
     })
     .then((response) => { return response.json() })
     .then((response) => {
-      console.log("••••••");
-      console.log(response);
+      // console.log("••••••");
+      // console.log(response);
       this.setState({data: response})
       // response && console.log(response.error)
     })
@@ -28,13 +28,9 @@ export default class Description extends Component {
   }
 
   render() {
-    // console.log("++++++");
-    // console.log(this.state);
-    // console.log(this.props);
-    // console.log(this.state.data.title);
     return <div className="well" style={{padding: "2% 5%", margin: "5%"}}>
       {this.state.data.map( element =>
-        <div style={{textAlign: 'center'}} >
+        <div key={element.id} style={{textAlign: 'center'}} >
           <Image key={element.id} src={element.media_url} style={{margin: '0 auto'}} responsive />
           <br />
         </div>

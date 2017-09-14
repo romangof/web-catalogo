@@ -4,8 +4,6 @@ import Description from './description';
 import Features from './features';
 import ActionLibrary from './action_library';
 
-// { border:'2px solid #9C9B9B'}
-
 export default ({ match }) => 
 <div>
   <Tabs id="uncontrolled-tab-example" justified mountOnEnter={false}>
