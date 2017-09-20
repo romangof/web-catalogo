@@ -15,12 +15,12 @@ export default () =>
   </Nav>
   <Nav pullRight>
     <Navbar.Brand>
-      <a href="#">
+      <a href="http://www.aceleracion.cl/">
         <img src={alLogo} style={logoStyle} alt="Aceleracion Labs"/>
       </a>
     </Navbar.Brand>
     <Navbar.Brand>
-      <a href="#">
+      <a href="http://www.kannus.cl/">
         <img src={kannusLogo} style={logoStyle} alt="Kannus"/>
       </a>
     </Navbar.Brand>

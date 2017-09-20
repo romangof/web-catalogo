@@ -9,6 +9,11 @@ hr {
   border-top: 1px solid #9C9B9B;
 }
 
+.borderless {
+  border: 0 solid;
+  border-radius: 0;
+}
+
 .tab-style {
   border-left: 1px solid #9C9B9B;
   font-size: 20px;

@@ -17,26 +17,29 @@ export default class Tasks extends Component {
 
   getValidationState() {
     var flag = false
-    Object.keys(this.state).map( item => {
-        // console.log(item, this.state[item])
-        if (!this.state[item]) flag = true
-      }
-    )
+    Object.keys(this.state).map( item => { if (!this.state[item]) flag = true })
     // console.log(flag);
     return flag;
   }
 
-
   render() {
     return (
-      <div className="" style={{padding: "2% 5%", margin: "5%"}}>
+      <div className="" style={{margin: "5%"}}>
         <Form horizontal>
           <FormGroup>
-            <Col smOffset={2} sm={10}>
-              <Checkbox name="q1" checked={this.state.q1} onChange={this.handleChange}>Pregunta 1</Checkbox>
-              <Checkbox name="q2" checked={this.state.q2} onChange={this.handleChange}>Pregunta 2</Checkbox>
-              <Checkbox name="q3" checked={this.state.q3} onChange={this.handleChange}>Pregunta 3</Checkbox>
-              <Checkbox name="q4" checked={this.state.q4} onChange={this.handleChange}>Pregunta 4</Checkbox>
+            <Col smOffset={2} sm={8}>
+              <div className="well borderless">
+                <Checkbox name="q1" checked={this.state.q1} onChange={this.handleChange}>Pregunta 1</Checkbox>
+              </div>
+              <div className="well borderless">
+                <Checkbox name="q2" checked={this.state.q2} onChange={this.handleChange}>Pregunta 2</Checkbox>
+              </div>
+              <div className="well borderless">
+                <Checkbox name="q3" checked={this.state.q3} onChange={this.handleChange}>Pregunta 3</Checkbox>
+              </div>
+              <div className="well borderless">
+                <Checkbox name="q4" checked={this.state.q4} onChange={this.handleChange}>Pregunta 4</Checkbox>
+              </div>
             </Col>
           </FormGroup>
 
