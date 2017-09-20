@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import { Image } from 'react-bootstrap';
+import { Image, ResponsiveEmbed } from 'react-bootstrap';
 
 export default class Description extends Component {
   constructor(props) {
     super(props);
-    this.state = { data: [{id: '', media_url: '' }]};
+    this.state = { data: [{id: '', media_url: '', media_type: 1 }]};
   }
 
   componentWillMount() {
-    // fetch( 'https://cors-anywhere.herokuapp.com/' + `http://catalogo.enaex.com/api/catalogo/${this.props.id}/multimedia`, { // comment this when pushing to heroku
+    // fetch( `https://cors-anywhere.herokuapp.com/http://catalogo.enaex.com/api/catalogo/${this.props.id}/multimedia`, { // comment this when pushing to heroku
     fetch( `/api/catalogo/${this.props.id}/multimedia`, { // use this when pushing to heroku
       headers: {
         'Accept': 'application/json',
@@ -28,10 +28,25 @@ export default class Description extends Component {
   }
 
   render() {
+    // function media(elem) {
+    //   switch (elem.media_type) {
+    //     case 1:
+    //       return <Image key={elem.id} src={elem.media_url} style={{margin: '0 auto'}} responsive />
+    //     case 2:
+    //       return <video key={elem.id} src={elem.media_url} controls />
+    //     default:
+    //       break;
+    //   }
+    // }
+
     return <div className="well" style={{padding: "2% 5%", margin: "5%"}}>
       {this.state.data.map( element =>
         <div key={element.id} style={{textAlign: 'center'}} >
-          <Image key={element.id} src={element.media_url} style={{margin: '0 auto'}} responsive />
+          <ResponsiveEmbed a4by3>
+            {/* {media(element)} */}
+            <embed key={element.id} src={element.media_url} />
+            {/* <iframe key={element.id} src={element.media_url}></iframe> */}
+          </ResponsiveEmbed>
           <br />
         </div>
       )}
