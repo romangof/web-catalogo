@@ -31,7 +31,7 @@ export default class Description extends Component {
     function media(elem) {
       switch (elem.media_type) {
         case 1:
-          return <Image key={elem.id} src={elem.media_url} style={{margin: '0 auto'}} responsive />
+          return <Image key={elem.id} src={elem.media_url} responsive />
         case 2:
           return <video key={elem.id} src={elem.media_url} controls />
         default:
@@ -41,11 +41,10 @@ export default class Description extends Component {
 
     return <div className="well" style={{padding: "2% 5%", margin: "5%"}}>
       {this.state.data.map( element =>
-        <div key={element.id} style={{textAlign: 'center'}} >
+        <div key={element.id}>
           <ResponsiveEmbed a4by3>
             {media(element)}
             {/* <embed key={element.id} src={element.media_url} /> */}
-            {/* <iframe key={element.id} src={element.media_url}></iframe> */}
           </ResponsiveEmbed>
           <br />
         </div>
