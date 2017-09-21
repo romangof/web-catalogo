@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Nav, Navbar, NavItem } from 'react-bootstrap';
+import { Nav, Navbar, NavItem } from 'react-bootstrap';
 import alLogo from '../assets/AL-header.png';
 import kannusLogo from '../assets/kannus-header.png';
 
