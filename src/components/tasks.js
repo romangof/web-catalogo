@@ -18,7 +18,6 @@ export default class Tasks extends Component {
   getValidationState() {
     var flag = false
     Object.keys(this.state).map( item => { if (!this.state[item]) flag = true })
-    // console.log(flag);
     return flag;
   }
 

@@ -16,9 +16,9 @@ export default class Description extends Component {
         'API-KEY': '9f580ac488f3'
       }
     })
-    .then((response) => response.json())
-    .then((response) => { this.setState({data: response}) })
-    .catch(e => { console.log(e); return e })
+    .then((response) => response.json() )
+    .then((response) => this.setState({data: response}) )
+    .catch( e => { console.log(e); return e } )
   }
 
   render() {
